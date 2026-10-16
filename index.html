@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PunchFour — Four-bar live punch desk</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div class="eyebrow">Workin' With AI · Live chairs</div>
+      <h1>PunchFour</h1>
+      <p>Four-bar live punch desk. Trumpet and piano stabs hit the groove so a looping bed finally has punches and finishes.</p>
+      <p id="status">Seating chairs…</p>
+      <p class="note">Tap any control to start audio. On iOS the silent switch mutes Web Audio.</p>
+    </header>
+
+    <section class="controls">
+      <label>BPM <input id="bpm" type="number" min="60" max="180" value="92"></label>
+      <label>Key <select id="key">
+        <option>A minor</option>
+        <option>C major</option>
+        <option>G major</option>
+        <option>D minor</option>
+        <option>F major</option>
+        <option>E minor</option>
+      </select></label>
+      <label>Bars <input id="barsCount" type="number" min="4" max="16" value="8"></label>
+    </section>
+
+    <section>
+      <h2>Groove</h2>
+      <div id="grooves" class="buttons"></div>
+    </section>
+
+    <section>
+      <h2>Recipe</h2>
+      <div id="recipes" class="buttons"></div>
+    </section>
+
+    <section class="play">
+      <button id="playA">Play A · Bed</button>
+      <button id="playB">Play B · Punch</button>
+      <button id="play8">Play 8 · Punch only</button>
+      <button id="stop">Stop</button>
+    </section>
+
+    <section>
+      <h2>Punch list</h2>
+      <pre id="punch"></pre>
+    </section>
+
+    <section class="export">
+      <button id="exportWav">Export WAV</button>
+      <button id="exportMid">Export MIDI</button>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
